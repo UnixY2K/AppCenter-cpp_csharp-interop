@@ -1,14 +1,17 @@
-#ignorar resultados de compilacion
+#ignore build compilation
 builddir/
 build/
 out/
-#ignorar vscode
-.vscode/
-#ignorar visual studio
+#ignore vscode
+.vscode/*
+## but add launch and tasks
+!.vscode/launch.json
+!.vscode/tasks.json
+#ignore visual studio files
 .vs/
 CMakeSettings.json
-#ignorar archivos de clangd
+#ignore clangd files
 .clangd/
 .cache/
-#ignorar comandos de compilacion (para clangd entre otros)
+#ignore compile_commands.json
 compile_commands.json
