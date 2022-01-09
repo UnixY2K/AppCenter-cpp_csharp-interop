@@ -1,0 +1,14 @@
+#ignorar resultados de compilacion
+builddir/
+build/
+out/
+#ignorar vscode
+.vscode/
+#ignorar visual studio
+.vs/
+CMakeSettings.json
+#ignorar archivos de clangd
+.clangd/
+.cache/
+#ignorar comandos de compilacion (para clangd entre otros)
+compile_commands.json
