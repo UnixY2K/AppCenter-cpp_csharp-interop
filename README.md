@@ -2,7 +2,7 @@
 
 App Center Interop example for c++/c#(winforms).
 
-## C# Steps
+## C# first Steps
 
 - Create a new C# project.
    ```sh
@@ -37,3 +37,13 @@ App Center Interop example for c++/c#(winforms).
       AppCenter.Start("{Your App Secret}", typeof(Analytics), typeof(Crashes));
   }    
   ```
+
+
+## C++ Steps
+
+Basically, you need to create a new or use an existing `C++ project`
+so you can build a dll that will contain your code that get called from the `C# project`.
+
+For demonstration purposes we will use meson/ninja to create a new `C++ project` and clang or msvc to compile it, but you can use your preferred toolchain (for example CMake) to build the dll.
+
+in this example project it will show a dialog box for simplicity.
