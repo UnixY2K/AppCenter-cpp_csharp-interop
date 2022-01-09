@@ -16,12 +16,24 @@ App Center Interop example for c++/c#(winforms).
    dotnet add package Microsoft.AppCenter.Analytics --version 4.4.0
    dotnet add package Microsoft.AppCenter.Crashes --version 4.4.0
    ```
+- 
+- import AppCenter SDK on program.cs
+  ```csharp
+  // Microsoft AppCenter SDK
+  using Microsoft.AppCenter;
+  using Microsoft.AppCenter.Analytics;
+  using Microsoft.AppCenter.Crashes;
+  ```
+
 - init the SDK on program.cs like the example on this project
   ```csharp
   static void Main()
   {
-    // do not store the app secret on source code
-    // this is only for demo purposes
-    AppCenter.Start("{Your App Secret}", typeof(Analytics), typeof(Crashes));
+      // you can check more about App Center SDK at
+      // https://docs.microsoft.com/en-us/appcenter/sdk/getting-started/wpf-winforms
+      // do not store the app secret on source code
+      // this is only for demo purposes
+      System.Console.WriteLine("App Center Powered.");
+      AppCenter.Start("{Your App Secret}", typeof(Analytics), typeof(Crashes));
   }    
   ```
