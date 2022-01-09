@@ -47,3 +47,22 @@ so you can build a dll that will contain your code that get called from the `C# 
 For demonstration purposes we will use meson/ninja to create a new `C++ project` and clang or msvc to compile it, but you can use your preferred toolchain (for example CMake) to build the dll.
 
 in this example project it will show a dialog box for simplicity.
+
+## Loading c++ code from C#
+
+after the dll is compiled, you can use it from the C# project.
+
+- Copy the `c++ dll(and all the required files)` to the `C# project` binary folder.
+    > This step can be automated with a build script, as it is only needed when you deploy the release of the application.
+- Add the following import to the `C# code`.
+  ```csharp
+  // DllImport
+  using System.Runtime.InteropServices;
+  ```
+- then add the function of the `C++ DLL` in the `C# code` like this:
+  ```csharp
+  // define the DLL entry point from c++ dll (void dllEntry() from myApp.dll)
+    [DllImport("myApp.dll", EntryPoint = "dllEntry")]
+    public static extern void dllEntry();
+  ```
+
