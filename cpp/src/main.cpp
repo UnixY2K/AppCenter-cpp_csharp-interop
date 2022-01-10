@@ -25,9 +25,4 @@ myAppAPI void setupAppCenterCallbacks(
 	Interop::AppCenter::setTrackEventCallback(trackEventExtraCallback);
 }
 
-// on this we call the funtion provided by the parameter
-myAppAPI void dllCallback(void (*callback)()) {
-	std::cout << "Callback from C++\n";
-	callback();
-}
 }
