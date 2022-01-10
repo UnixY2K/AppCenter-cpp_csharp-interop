@@ -65,3 +65,6 @@ after the dll is compiled, you can use it from the C# project.
     public static extern void dllEntry();
   ```
 
+## Multiplatform Support
+
+the SDK is only available for Windows, IOS and Android, for this example exists `csharp-cross-platform.csproj` and `source.cs`.

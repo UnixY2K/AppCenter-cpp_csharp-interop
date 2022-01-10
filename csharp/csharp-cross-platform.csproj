@@ -12,11 +12,11 @@
   </ItemGroup>
 
   <ItemGroup>
-    <!-- this will only work on Windows uncomment if true -- >
+    <!-- this will only work on Windows uncomment if true 
       <PackageReference Include="Microsoft.AppCenter" Version="4.4.0" />
       <PackageReference Include="Microsoft.AppCenter.Analytics" Version="4.4.0" />
       <PackageReference Include="Microsoft.AppCenter.Crashes" Version="4.4.0" />
-    <!-- -->
+    -->
   </ItemGroup>
 
   <ItemGroup>
