@@ -20,9 +20,17 @@ static class Program
         // do not store the app secret on source code
         // this is only for demo purposes
         System.Console.WriteLine("App Center Powered.");
+        // this will track exceptions on crash
+        Application.ThreadException += (sender, args) =>
+        {
+            Crashes.TrackError(args.Exception);
+        };
+        // this will start the App Center SDK
         AppCenter.Start("{Your App Secret}", typeof(Analytics), typeof(Crashes));
+        // this will setup the callbacks for C++
         AppCenterCpp.setup();
+        // this will initialize the C++ app
         AppCenterCpp.initApp();
     }
-    
+
 }
