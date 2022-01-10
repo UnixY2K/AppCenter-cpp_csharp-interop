@@ -4,6 +4,7 @@
     // Para más información, visite: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
+
         {
             "name": "Launch C++ Project",
             "type": "lldb",
@@ -25,33 +26,19 @@
                 "program": "${workspaceFolder}/builddir/cpp/myApp.exe",
             }
         },
-        //{
-        //    "name": "Launch C++ Project(Windows)",
-        //    "type": "cppvsdbg",
-        //    "request": "launch",
-        //    "program": "${workspaceFolder}/builddir/cpp/myApp.exe",
-        //    "args": [],
-        //    "stopAtEntry": false,
-        //    "cwd": "${workspaceFolder}",
-        //    "environment": [
-        //        {
-        //            "name": "Path",
-        //            "value": "${env:Path};${workspaceFolder}/builddir/sdk/appcenter"
-        //        }
-        //    ],
-        //    "console": "externalTerminal",
-        //    "preLaunchTask": "build C++ project"
-        //},
         {
-            "name": "Launch C#  Project",
+            "name": "Launch C# Project",
             "type": "coreclr",
             "request": "launch",
             "preLaunchTask": "build C# project",
-            "program": "${workspaceFolder}/csharp/bin/Debug/net6.0-windows/csharp.dll",
+            "program": "${workspaceFolder}/csharp/bin/Debug/net6.0/csharp-cross-platform.dll",
             "args": [],
             "cwd": "${workspaceFolder}/csharp",
             "console": "internalConsole",
-            "stopAtEntry": false
+            "stopAtEntry": false,
+            "windows": {
+                "program": "${workspaceFolder}/csharp/bin/Debug/net6.0-windows/csharp.dll",
+            }
         }
     ]
 }
