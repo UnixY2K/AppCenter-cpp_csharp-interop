@@ -16,7 +16,7 @@
             "environment": [
                 {
                     "name": "Path",
-                    "value": "${env:Path};${workspaceFolder}/builddir/sdk/appcenter"
+                    "value": "${env:Path};${workspaceFolder}/builddir/cpp"
                 }
             ],
             "console": "externalTerminal",
@@ -35,6 +35,12 @@
             "program": "${workspaceFolder}/csharp/bin/Debug/net6.0/csharp-cross-platform.dll",
             "args": [],
             "cwd": "${workspaceFolder}/csharp",
+            "environment": [
+                {
+                    "name": "Path",
+                    "value": "${env:Path};${workspaceFolder}/builddir/cpp"
+                }
+            ],
             "console": "internalConsole",
             "stopAtEntry": false,
             "windows": {
