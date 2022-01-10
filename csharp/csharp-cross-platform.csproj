@@ -9,6 +9,7 @@
 
   <ItemGroup>
     <Compile Remove="source\Program.cs" />
+    <Compile Remove="source\interop\AppCenter.cs" />
   </ItemGroup>
 
   <ItemGroup>

@@ -1,7 +1,6 @@
 namespace csharp;
 
-// DllImport
-using System.Runtime.InteropServices;
+using interop;
 
 // Microsoft AppCenter SDK
 using Microsoft.AppCenter;
@@ -22,10 +21,8 @@ static class Program
         // this is only for demo purposes
         System.Console.WriteLine("App Center Powered.");
         AppCenter.Start("{Your App Secret}", typeof(Analytics), typeof(Crashes));
-        dllEntry();
+        AppCenterCpp.setup();
+        AppCenterCpp.initApp();
     }
-
-    // define the DLL entry point from c++ dll (void dllEntry() from myApp.dll)
-    [DllImport("myApp.dll", EntryPoint = "dllEntry")]
-    public static extern void dllEntry();
+    
 }

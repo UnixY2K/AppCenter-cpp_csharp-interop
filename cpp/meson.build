@@ -3,6 +3,7 @@ myApp_inc = include_directories('include')
 myApp_sources = [
     'src/main.cpp',
     'src/dialogBox.cpp',
+    'src/AppCenter.cpp',
 ]
 myApp_args = []
 myApp_link = []
