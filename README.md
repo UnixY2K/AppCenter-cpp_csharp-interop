@@ -67,7 +67,7 @@ after the dll is compiled, you can use it from the C# project.
 
 ## Multiplatform Support
 
-the SDK (C#) is only available for Windows, IOS and Android, for this example exists `csharp-cross-platform.csproj` and `source.cs`.
+the SDK (C#) is only available for Windows, IOS and Android.
 
 ## AppCenter Callbacks
 
