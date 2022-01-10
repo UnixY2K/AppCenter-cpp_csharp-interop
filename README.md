@@ -16,7 +16,6 @@ App Center Interop example for c++/c#(winforms).
    dotnet add package Microsoft.AppCenter.Analytics --version 4.4.0
    dotnet add package Microsoft.AppCenter.Crashes --version 4.4.0
    ```
-- 
 - import AppCenter SDK on program.cs
   ```csharp
   // Microsoft AppCenter SDK
