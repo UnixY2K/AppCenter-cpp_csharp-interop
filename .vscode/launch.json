@@ -5,6 +5,7 @@
     "version": "0.2.0",
     "configurations": [
 
+
         {
             "name": "Launch C++ Project",
             "type": "lldb",
@@ -21,7 +22,7 @@
             "console": "externalTerminal",
             "preLaunchTask": "build C++ Project",
             "windows": {
-                "type": "cppvsdbg",
+                //"type": "cppvsdbg",
                 "request": "launch",
                 "program": "${workspaceFolder}/builddir/cpp/myApp.exe",
             }
