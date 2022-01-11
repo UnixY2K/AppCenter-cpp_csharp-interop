@@ -11,7 +11,6 @@
 
 // your main code
 int main() {
-	std::cout << "C++ Powered\n";
 	Interop::AppCenter::trackEvent("[Native][Init]", {{"Hello", "from C++"}});
 	showDialogBox("C++ Powered", "Hello from C++!");
 }
