@@ -7,8 +7,6 @@ using Microsoft.AppCenter;
 using Microsoft.AppCenter.Analytics;
 using Microsoft.AppCenter.Crashes;
 
-// secrets
-using Microsoft.Extensions.Configuration;
 
 static class Program
 {
