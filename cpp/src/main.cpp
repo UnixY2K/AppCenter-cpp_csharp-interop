@@ -2,6 +2,10 @@
 #include <dialogBox.hpp>
 #include <iostream>
 
+#ifndef APPCENTER_APP_SECRET
+#define APPCENTER_APP_SECRET ""
+#endif
+
 #define myAppLIBRARY_EXPORT
 #include <exportAPI.hpp>
 
@@ -24,5 +28,9 @@ myAppAPI void setupAppCenterCallbacks(
 	Interop::AppCenter::setTrackEventCallback(trackEventCallback);
 	Interop::AppCenter::setTrackEventCallback(trackEventExtraCallback);
 }
-
+// this will retrieve the AppCenter app secret
+myAppAPI const char* getAppCenterAppSecret() {
+	constexpr const char *appSecret = APPCENTER_APP_SECRET;
+	return appSecret;
+}
 }

@@ -7,6 +7,9 @@ using Microsoft.AppCenter;
 using Microsoft.AppCenter.Analytics;
 using Microsoft.AppCenter.Crashes;
 
+// secrets
+using Microsoft.Extensions.Configuration;
+
 static class Program
 {
     /// <summary>
@@ -26,7 +29,7 @@ static class Program
             Crashes.TrackError(args.Exception);
         };
         // this will start the App Center SDK
-        AppCenter.Start("{Your App Secret}", typeof(Analytics), typeof(Crashes));
+        AppCenter.Start(AppCenterCpp.getAppSecret(), typeof(Analytics), typeof(Crashes));
         // this will setup the callbacks for C++
         AppCenterCpp.setup();
         // this will initialize the C++ app

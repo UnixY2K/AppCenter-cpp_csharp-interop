@@ -34,6 +34,7 @@
             "preLaunchTask": "build C# project",
             "program": "${workspaceFolder}/csharp/bin/Debug/net6.0/csharp-cross-platform.dll",
             "args": [],
+            "justMyCode": false,
             "cwd": "${workspaceFolder}/csharp",
             "environment": [
                 {

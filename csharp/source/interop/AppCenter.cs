@@ -25,20 +25,28 @@ static class AppCenterCpp
         dllEntry();
     }
 
+    public static string getAppSecret()
+    {
+        var result = getAppCenterAppSecret();
+        var strResult = System.Runtime.InteropServices.Marshal.PtrToStringAnsi(result);
+        return strResult ?? "";
+    }
+
+    [DllImport("myApp")]
+    private static extern IntPtr getAppCenterAppSecret();
+
     // the C++ dll entry point
-    [DllImport("myApp.dll", EntryPoint = "dllEntry")]
+    [DllImport("myApp", EntryPoint = "dllEntry")]
     private static extern void dllEntry();
-    [DllImport("myApp.dll")]
+    [DllImport("myApp")]
     private static extern void setupAppCenterCallbacks(TrackEventDelegate normal, TrackEventExtraDelegate extra);
 
     private static void trackEventFunc(string eventName)
     {
-        Console.WriteLine("trackEventFunc: " + eventName);
         Analytics.TrackEvent(eventName);
     }
     private static void trackEventFunc(string eventName, string properties)
     {
-        Console.WriteLine("trackEventFunc: " + eventName + " " + properties);
         // convert the properties string(json) to a dictionary
         var props = JsonConvert.DeserializeObject<Dictionary<string, string>>(properties);
         Analytics.TrackEvent(eventName, props);

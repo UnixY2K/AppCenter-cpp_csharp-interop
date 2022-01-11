@@ -16,6 +16,11 @@ if host_machine.system() == 'linux'
     myApp_deps += [gtkmm_dep]
 endif
 
+## add app center app secret to arguments
+myApp_args += [
+    '-DAPPCENTER_APP_SECRET="'+get_option('APPCENTER_APP_SECRET')+'"',
+]
+
 
 # we compile the c++ application as a shared library
 myApp_lib = library('myapp',

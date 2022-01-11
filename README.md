@@ -2,6 +2,24 @@
 
 App Center Interop example for c++/c#(winforms).
 
+# App Center Build with this project
+
+> this steps will be called from the custom build scripts on App Center
+> So you will need to set the following environment variables
+> APPCENTER_APP_SECRET
+
+- on this example the c++ project will contain the app center application secret
+- build the project with the secret like this:
+  ```ps1
+  meson builddir '-DAPPCENTER_APP_SECRET="<your secret>"'
+  cd builddir
+  meson compile
+  ```
+- this will generate a dll that needs to be copied to the c# project binary folder
+- do the common steps for the c# project
+
+# From scratch guide
+
 ## C# first Steps
 
 - Create a new C# project.

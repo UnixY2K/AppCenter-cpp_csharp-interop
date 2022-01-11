@@ -1,0 +1,1 @@
+option('APPCENTER_APP_SECRET', type : 'string', value : '', description : 'AppCenter app secret')
