@@ -1,8 +1,22 @@
 # App Center c++/c# SDK Interop
 
+# Using C# as a native library for C++ (Experimental)
+
+DotNet Runtime, has experimental support for native AOT compilation, this allows to create
+a native library in C#(in this case a DLL) than can be used in C++.
+
+> please be aware that this function is experimental and might not get into the main
+> dotnet runtime. It is expected that will arrive in DotNet 7.0.
+
+## Steps from scratch
+
+Setup a dotnet project like the on this [github repo](https://github.com/ninjaoflight/dotnet-native-lib), you will only need the c# project not the c++ project.
+
+# Using the C++ code as a library
+
 App Center Interop example for c++/c#(winforms).
 
-# App Center Build with this project
+## App Center Build with this project
 
 > this steps will be called from the custom build scripts on App Center
 > So you will need to set the following environment variables
