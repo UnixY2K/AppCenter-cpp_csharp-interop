@@ -2,7 +2,7 @@
 #include <loadLib.hpp>
 
 // function pointer to the function we want to call
-void (*doGreet)(const char *);
+void (*initAppCenter)(const char *secret);
 
 // your main code
 int main() {
@@ -12,11 +12,11 @@ int main() {
 #else
 	lib += ".so";
 #endif
-	doGreet =
-	    (void (*)(const char *))loadlib::getFuncPtr(lib.c_str(), "doGreet");
-	if (doGreet) {
-		doGreet("C++");
+	initAppCenter = (void (*)(const char *))loadlib::getFuncPtr(
+	    lib.c_str(), "APPCENTER_API_START");
+	if (initAppCenter) {
+		initAppCenter("C++");
 	} else {
-		std::cerr << "[C++/Native]Error loading library" << std::endl;
+		std::cerr << "[C++/Native]Error loading library\n";
 	}
 }

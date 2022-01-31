@@ -100,6 +100,11 @@ public class AppCenterAPI
         try
         {
             Console.WriteLine(ex.Message);
+            Console.WriteLine(ex.StackTrace);
+            if(ex.InnerException != null)
+            {
+                Console.WriteLine(ex.InnerException.ToString());
+            }
             Crashes.TrackError(ex);
         }
         catch (System.Exception ex2)

@@ -52,9 +52,13 @@
                     // runtime [win-x64, linux-x64, osx-x64]
                     "-r",
                     "win-x64",
-                    "--self-contained",
                     // release
-                    //"-c release"
+                    "-c",
+                    "release",
+                    // single file
+                    "/p:IncludeNativeLibrariesForSelfExtract=true",
+                    "--self-contained",
+                    "true"
                 ],
             },
             "linux": {
