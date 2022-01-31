@@ -2,7 +2,7 @@
 
 #ifdef _WIN32
 #include <windows.h>
-#define symLoad GetProcAddress GetProcAddress
+#define symLoad GetProcAddress
 #else
 #include <dlfcn.h>
 #define symLoad dlsym
@@ -25,7 +25,7 @@ void *getFuncPtr(const char *path, const char *funcName) {
 	if (!handle) {
 		return nullptr;
 	}
-	void *funcPtr = symLoad(handle, funcName);
+	void *funcPtr = (void*)symLoad(handle, funcName);
 	return funcPtr;
 }
 } // namespace loadlib
