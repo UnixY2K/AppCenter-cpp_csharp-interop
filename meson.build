@@ -7,3 +7,4 @@ project(
 version = '1.0.0 v2022'
 
 subdir('cpp')
+subdir('cpp-loader')

@@ -12,6 +12,18 @@ a native library in C#(in this case a DLL) than can be used in C++.
 
 Setup a dotnet project like the on this [github repo](https://github.com/ninjaoflight/dotnet-native-lib), you will only need the c# project not the c++ project.
 
+## Creating the c++ project
+
+you can use an existing c++ project or create a new one.
+on this case we will use the existing on the previous repo, but you can create your own.
+also we will use runtime load of the library but you can link against the dll and use
+```c++
+extern "C"{
+  // define the functions that will be from the library like this
+  void* foo();
+}
+```
+
 # Using the C++ code as a library
 
 App Center Interop example for c++/c#(winforms).
