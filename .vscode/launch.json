@@ -4,10 +4,29 @@
     // Para más información, visite: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
-
-
         {
-            "name": "Launch C++ Project",
+            "name": "Launch C++ Project(Loader)",
+            "type": "lldb",
+            "request": "launch",
+            "program": "${workspaceFolder}/builddir/cpp-loader/myApp",
+            "args": [],
+            "cwd": "${workspaceFolder}",
+            "environment": [
+                {
+                    "name": "Path",
+                    "value": "${env:Path};${workspaceFolder}/builddir/cpp-loader"
+                }
+            ],
+            "console": "externalTerminal",
+            "preLaunchTask": "build C++ Project",
+            "windows": {
+                //"type": "cppvsdbg",
+                "request": "launch",
+                "program": "${workspaceFolder}/builddir/cpp-loader/myApp.exe",
+            }
+        },
+        {
+            "name": "Launch C++ Project(Library)",
             "type": "lldb",
             "request": "launch",
             "program": "${workspaceFolder}/builddir/cpp/myApp",
