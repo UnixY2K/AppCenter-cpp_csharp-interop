@@ -19,6 +19,61 @@
             }
         },
         {
+            "label": "build C# native library",
+            "command": "dotnet",
+            "type": "shell",
+            "args": [
+                "publish",
+                // shared library
+                "/p:NativeLib=Shared",
+                // self contained
+                "/p:SelfContained=true",
+                // runtime [win-x64, linux-x64, osx-x64]
+                // "-r ${runtime}",
+                // release
+                //"-c release"
+            ],
+            // set working directory
+            "options": {
+                "cwd": "${workspaceRoot}/dotnet-native-lib"
+            },
+            "group": "build",
+            "presentation": {
+                "reveal": "silent"
+            },
+            "problemMatcher": "$msCompile",
+            "windows": {
+                "args": [
+                    "publish",
+                    // shared library
+                    "/p:NativeLib=Shared",
+                    // self contained
+                    "/p:SelfContained=true",
+                    // runtime [win-x64, linux-x64, osx-x64]
+                    "-r",
+                    "win-x64",
+                    "--self-contained",
+                    // release
+                    //"-c release"
+                ],
+            },
+            "linux": {
+                "args": [
+                    "publish",
+                    // shared library
+                    "/p:NativeLib=Shared",
+                    // self contained
+                    "/p:SelfContained=true",
+                    // runtime [win-x64, linux-x64, osx-x64]
+                    "-r",
+                    "linux-x64",
+                    "--self-contained",
+                    // release
+                    //"-c release"
+                ],
+            }
+        },
+        {
             "label": "build C# project",
             "command": "dotnet",
             "type": "shell",

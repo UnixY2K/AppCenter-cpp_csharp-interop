@@ -14,7 +14,7 @@
             "environment": [
                 {
                     "name": "Path",
-                    "value": "${env:Path};${workspaceFolder}/builddir/cpp-loader"
+                    "value": "${env:Path};${workspaceFolder}/builddir/cpp-loader;${workspaceFolder}/dotnet-native-lib/bin/Debug/net6.0/win-x64/native"
                 }
             ],
             "console": "externalTerminal",

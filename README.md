@@ -24,6 +24,16 @@ extern "C"{
 }
 ```
 
+## Setup exported functions in C#
+
+create all the required function for you in the c# project, you can check the example in
+[AppCenterAPI.cs](dotnet-native-lib/src/AppCenterAPI.cs), this file contains the init and
+track Event/Error functions exported to the library, you can add your own.
+
+> Please keep in mind that it has the same limitations of the C# SDK, like native crashes
+> reports and distribute please check on the [docs](https://docs.microsoft.com/en-us/appcenter/sdk/crashes/wpf-winforms)
+> for more information.
+
 # Using the C++ code as a library
 
 App Center Interop example for c++/c#(winforms).
