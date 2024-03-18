@@ -1,5 +1,7 @@
 # App Center c++/c# SDK Interop
 
+> App Center will be retired in March 31, 2025. you can still see this project to learn ways of how to perform interop between dotnet projects and native applications (and viceversa in the other branch)
+
 # Using C# as a native library for C++ (Experimental)
 
 DotNet Runtime, has experimental support for native AOT compilation, this allows to create
